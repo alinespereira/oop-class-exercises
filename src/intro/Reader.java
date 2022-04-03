@@ -19,6 +19,13 @@ public class Reader {
         }
     }
 
+    public double readDouble() {
+        while (!this.keyboard.hasNextDouble()) {
+            this.keyboard.next();
+        }
+        return this.keyboard.nextDouble();
+    }
+
     public static void main(String[] args) {
         Reader r1 = new Reader("Reader 1");
         Reader r2 = new Reader("Reader 2");
